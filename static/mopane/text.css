@@ -1,0 +1,16 @@
+/* REGISTER TEXT */
+.small-text {
+    margin-top: 20px;
+    font-size: x-small;
+  }
+  
+  .small-text > span {
+    color: rgb(98, 98, 214);
+    margin-left: 3px; 
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .small-text > span:hover{
+    text-decoration: underline;
+  }

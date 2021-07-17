@@ -1,0 +1,25 @@
+<!DOCTYPE html>{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baya Weaver | {% block title %}{% endblock %}</title>
+
+    <!-- material design -->
+    <link rel="stylesheet" href="{% static 'mdt/material.min.css' %}">
+    <script src="{% static 'mdt/material.min.js' %}"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- mopane buttons -->
+    <link rel="stylesheet" href="{% static 'mopane/mopane.main.css' %}">
+    <script src="{% static 'mopane/communications.js' %}"></script>
+
+    <!-- imports by subpage -->
+    {% block imports %} {% endblock %}
+</head>
+{% block style %}
+{% endblock %}
+<!-- body-->
+{% block body %}
+{% endblock %}
+</html>

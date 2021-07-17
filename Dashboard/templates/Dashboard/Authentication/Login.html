@@ -1,0 +1,104 @@
+{% extends 'base.html' %}{% load static %}
+<!-- title -->
+{% block title %} Login {% endblock %}
+<!-- block imports -->
+{% block imports %}
+    <link rel="stylesheet" href="{% static 'css/Login.css' %}" >
+{% endblock %}
+
+<!-- style -->
+{% block style %}
+    <style>
+        /* BODY */
+        body {
+            background: url('{% static "jpg/mountains.jpg" %}');
+            background-size: cover;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* custom fonts */
+        .mdl-textfield__input {
+            font-size: medium;
+            margin-top: 10px;
+        }
+
+        
+    </style>
+{% endblock %}
+
+<!-- body -->
+{% block body %}
+    <body>
+        <!-- Login modal-->
+        <div class="login-modal">
+           <div class="text-header">Log in to your account</div>
+           <!-- username input -->
+           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input " type="text" id="username-input">
+                <label class="mdl-textfield__label" for="Username">Username</label>
+           </div>
+           <!-- password input -->
+           <div class="">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="password" id="password-input">
+                    <label class="mdl-textfield__label" for="Password">Password</label>
+                </div>
+            </div>
+            <!-- login button-->
+            <div class=""></div>
+            <button class="plain-button" onclick="login()">Login</button>
+            <!-- dont have an account-->
+            <div class="small-text">Don't have an account ?<span><a href="/dashboard/register/" style="color: rgb(98, 98, 214);">Register</a></span></div>
+
+            <!-- loading div-->
+            <div id="login_loader" class="mopane-loader">
+                <div class="loader"></div>
+            </div>
+
+        </div>
+    </body>
+    <script>
+        //function to login 
+        function login(){
+            var username_string = document.getElementById("username-input").value
+            var password_string = document.getElementById("password-input").value
+
+            //start loading 
+            set_login_page_loading(true)
+            //credentials
+            var credentials = {
+                "username" : username_string,
+                "password" : password_string
+            }
+
+            //send an http request using a function in (cummunications.js)
+            POST_REQUEST("/dashboard/login/", credentials, function(response) {
+                //hide loading after receiving response
+                set_login_page_loading(false)
+                if (response == "200") {
+                    //if we get a 200 response that means the login was successful
+                    //go to home page
+                    window.location.replace("/dashboard/")
+                } else {
+                    alert(response)
+                }
+            })
+        }
+
+
+        //function to set if the page is loading
+        function set_login_page_loading(setLoading){
+            //loading element
+            var loading_modal = document.getElementById("login_loader")
+            //if true add the classlist show to the element
+            if (setLoading){
+                if (!loading_modal.classList.contains("show")){
+                   loading_modal.classList.add("show")
+                }
+                return
+            }
+            loading_modal.classList.remove("show")
+        }
+    </script>
+{% endblock %}
