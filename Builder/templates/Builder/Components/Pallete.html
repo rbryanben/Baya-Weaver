@@ -1,3 +1,4 @@
+{% load static %}
 <!-- Border -->
 <div class="pallet-group">
     <div class="name"><i class="fas fa-caret-down"></i> Border</div>
@@ -171,7 +172,7 @@
             <div class="pallet-panel">
                 <div class="div-flex-start">
                     <!-- boder color -->
-                    <div class="color-div" style="background-color: aquamarine;"></div>
+                    <div class="color-div" style="background-color: aqua;"></div>
                     <input class="pallet-text-input" style="margin-left: 10px ;" value="#0732002">
                 </div>
             </div>
@@ -186,7 +187,7 @@
         <!-- background -->
         <div class="tool-body single">
             <div class="pallet-panel single tall">
-               <div class="element-background">
+               <div class="element-background" style="background-size: cover; background-image: url({% static 'jpg/sunset.jpg' %});">
 
                </div>
             </div>
@@ -240,17 +241,6 @@
                 </div>
                 <div class="pallet-panel-percent-px div-flex-start">
                     <input value="100" class="pallet-int-input">
-                </div>
-            </div>
-        </div>
-
-        <!-- color -->
-        <div class="tool-body reverse" style="grid-template-columns: 1fr; margin-top: 15px;">
-            <div class="pallet-panel">
-                <div class="div-flex-start">
-                    <!-- boder color -->
-                    <div class="color-div" style="background-color: aquamarine;"></div>
-                    <input class="pallet-text-input" style="margin-left: 10px ;" value="#0732002">
                 </div>
             </div>
         </div>
