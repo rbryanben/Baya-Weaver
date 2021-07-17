@@ -1,0 +1,201 @@
+/* PALLETE */
+body > .pallet {
+    background-color: rgb(34, 34, 34);
+    overflow-y: scroll; 
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+/* VIEW */
+body > .view {
+    background-color: rgb(27, 27, 27);
+}
+
+/* COMPONENT PALLETE GROUP */
+.pallet-group {
+    padding: 15px;
+    border-top: solid rgba(128, 128, 128, 0.363) 0.5px;
+    color: rgb(226, 226, 226);
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+
+.pallet-group > .name {
+    margin-top: 10px !important;
+    font-size: 11pt;
+    color: gray;
+}
+
+.pallet-group > .name > i {
+    margin-right: 4px;
+}
+
+.pallet-group > .tool-body {
+    font-size: 9pt;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 5px;
+}
+
+.pallet-group >.tool-body.reverse {
+    grid-template-columns: 4fr 1fr;
+}
+
+.pallet-group > .tool-body.single {
+    grid-template-columns: 1fr;
+}
+
+
+/* Color Div */
+.color-div {
+    height: 25px;
+    width: 25px;
+    background-color: rgb(40, 72, 109);
+    border-radius: 6px;
+    margin-left: 15px;
+}
+
+/* Component pallet-panel */
+.pallet-panel {
+    background-color: rgb(46, 46, 46);
+    height: 40px;
+    border-radius: 6px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    color: rgb(226, 226, 226);
+    font-size: small;
+}
+
+.pallet-panel.single {
+    grid-template-columns: 1fr;
+}
+
+.pallet-panel.four {
+    grid-template-columns: repeat(4,1fr);
+}
+
+.pallet-panel.tall {
+    height: 100px;
+}
+
+.selected {
+    color: rgb(76, 76, 177);
+}
+
+/* adjust left for slider */
+.adjust-left {
+    margin-left: -10px !important;
+}
+
+/* input with px */
+.pallet-panel-value-px {
+    margin-left: -10px;
+}
+.pallet-panel-value-px::after {
+    content: 'px';
+    margin-left: 3px;
+    font-size: xx-small;
+    padding-top: -10px;
+    color: gray;
+}
+
+/* percent input */
+.pallet-panel-percent-px {
+    margin-left: -10px;
+}
+
+.pallet-panel-percent-px::after{
+    content: '%';
+    margin-left: 3px;
+    font-size: xx-small;
+    padding-top: -10px;
+    color: gray;
+}
+
+/* input with pt */
+.pallet-panel-value-pt {
+    margin-left: -10px;
+}
+
+.pallet-panel-value-pt::after {
+    content: 'pt';
+    margin-left: 3px;
+    font-size: xx-small;
+    padding-top: -10px;
+    color: gray;
+}
+
+
+/* Pallet-panel-four */
+.tool-body-four {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Pallet-panel reverse */
+.pallet-panel.even {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Pallet input integer */
+.pallet-int-input {
+    outline: none;
+    border: none;
+    width: 30px;
+    text-align: right;
+    color: rgb(230, 230, 230);
+    background: none;
+}
+
+/* Pallet input text */
+
+.pallet-text-input {
+    outline: none;
+    border: none;
+    width: 60px;
+    text-align: right;
+    color: rgb(230, 230, 230);
+    background: none;
+}
+
+
+/* Pallet input text */
+
+.pallet-long-text-input {
+    outline: none;
+    border: none;
+    width: 90%;
+    text-align: right;
+    color: rgb(230, 230, 230);
+    background: none;
+}
+
+
+.text-align-left {
+    text-align: left;
+    margin-left: 10px;
+}
+
+/* element background */
+.element-background {
+    background-color: green;
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+}
+
+
+
+
