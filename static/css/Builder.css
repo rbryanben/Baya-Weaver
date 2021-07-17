@@ -28,3 +28,20 @@ body > .navigation {
     align-items: center;
     justify-content: start;
 }
+
+
+/* BUILDER VIEW */
+.preview-page {
+    min-height: 200%;
+    border-radius: 6px;
+}
+
+.preview-page > *{
+    border-radius: 6px;
+}
+
+
+.view {
+    overflow-y: scroll;
+    padding: 40px;
+}
