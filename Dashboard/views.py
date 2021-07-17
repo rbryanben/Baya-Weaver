@@ -21,6 +21,11 @@ def login_(request):
         else:
             return HttpResponse("Invalid Credentials")
 
+def dashboard(request):
+    #GET method return the dashboard 
+    if (request.method == "GET"):
+        return render(request,'Dashboard/Dashboard.html')
+        
 
 
 def requestGetJSONValue(request,key):
