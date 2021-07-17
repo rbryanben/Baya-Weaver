@@ -24,3 +24,10 @@ urlpatterns = [
     path('dashboard/',include("Dashboard.urls")), # Add urls from dashboard 
     path('builder/',include("Builder.urls"))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
+# upload in debug mode
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
