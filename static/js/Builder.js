@@ -16,7 +16,7 @@ function get_project_template(id){
     POST_REQUEST(template_compiled_url, null, function(response) {
         setTimeout(function(){
             preview_page.innerHTML = response
-        },2000)
+        },1000)
         
     })
 }
